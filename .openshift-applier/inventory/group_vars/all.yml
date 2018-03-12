@@ -8,3 +8,11 @@ openshift_cluster_content:
     params: "{{ inventory_dir }}/../params/projectrequests/dev-tooling"
     tags:
     - projects
+- object: apicurio-server
+  content:
+  - name: eap-7.1-imagestream
+    template: "{{ inventory_dir }}/../templates/imagestream-one-tag.yml"
+    params: "{{ inventory_dir }}/../params/apicurio/eap-imagestream"
+    namespace: dev-tooling
+    tags:
+    - apicurio
