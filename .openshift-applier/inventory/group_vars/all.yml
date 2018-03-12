@@ -1,0 +1,10 @@
+---
+openshift_cluster_content:
+- object: projectrequest
+  content:
+  - name: ci-cd
+    template: "https://raw.githubusercontent.com/redhat-cop/cluster-lifecycle/master/files/projectrequest/template.yml"
+    template_action: create
+    params: "{{ inventory_dir }}/../params/projectrequests/dev-tooling"
+    tags:
+    - projects
