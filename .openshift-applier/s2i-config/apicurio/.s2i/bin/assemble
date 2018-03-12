@@ -2,13 +2,10 @@
 
 set -ex
 
-mkdir /tmp/geoserver                                                                                                                                                     
-cd /tmp/geoserver        
-echo "=== downloading apicurio studio war distribution"                                                                                                                                                
+mkdir /tmp/apicurio                                                                                                                                                     
+cd /tmp/apicurio                                                                                                                                                       
 curl -L -O https://github.com/Apicurio/apicurio-studio/releases/download/v0.2.4.Final/apicurio-studio-0.2.4.Final-quickstart.zip
-unzip -q apicurio-studio-0.2.4.Final-quickstart.zip                                                                                                                                       
-echo "=== moving apicurio.war to ROOT.war in deployments directory and displaying the result"                                                                               
+unzip -q apicurio-studio-0.2.4.Final-quickstart.zip                                                                                                                          
 mv apicurio-studio-0.2.4.Final/standalone/deployments/* $JBOSS_HOME/standalone/deployments                                                                                                           
 ls -alh $JBOSS_HOME/standalone/deployments/                                                                                                                                   
-echo -e  "=== cleaning up tmp"
-rm -rf /tmp/geoserver
+rm -rf /tmp/apicurio
