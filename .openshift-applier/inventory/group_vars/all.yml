@@ -16,3 +16,9 @@ openshift_cluster_content:
     namespace: dev-tooling
     tags:
     - apicurio
+  - name: apicurio-build
+    template: "{{ inventory_dir }}/../templates/s2i-source-build.yml"
+    params: "{{ inventory_dir }}/../params/apicurio/apicurio-image-build"
+    namespace: dev-tooling
+    tags:
+    - apicurio
