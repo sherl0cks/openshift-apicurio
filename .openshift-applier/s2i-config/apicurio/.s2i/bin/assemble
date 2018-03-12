@@ -9,3 +9,5 @@ unzip -q apicurio-studio-0.2.4.Final-quickstart.zip
 mv apicurio-studio-0.2.4.Final/standalone/deployments/* $JBOSS_HOME/standalone/deployments                                                                                                           
 ls -alh $JBOSS_HOME/standalone/deployments/                                                                                                                                   
 rm -rf /tmp/apicurio
+
+cp /tmp/src/configuration/* $JBOSS_HOME/standalone/configuration
