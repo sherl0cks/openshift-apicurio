@@ -10,4 +10,5 @@ mv apicurio-studio-0.2.4.Final/standalone/deployments/* $JBOSS_HOME/standalone/d
 ls -alh $JBOSS_HOME/standalone/deployments/                                                                                                                                   
 rm -rf /tmp/apicurio
 
+ls /tmp
 cp /tmp/src/configuration/* $JBOSS_HOME/standalone/configuration
