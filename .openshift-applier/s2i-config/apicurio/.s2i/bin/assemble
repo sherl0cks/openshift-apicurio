@@ -1,6 +1,6 @@
 #!/bin/bash                                                                                                                                                              
 
-set -e
+set -ex
 
 mkdir /tmp/geoserver                                                                                                                                                     
 cd /tmp/geoserver        
