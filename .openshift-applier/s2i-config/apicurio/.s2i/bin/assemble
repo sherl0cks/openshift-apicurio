@@ -10,6 +10,7 @@ unzip -q apicurio-studio-0.2.4.Final-quickstart.zip
 mv apicurio-studio-0.2.4.Final/standalone/deployments/* $JBOSS_HOME/standalone/deployments         
 
 curl -L -O https://dev.mysql.com/downloads/file/?id=474258     
+ls
 unzip -q mysql-connector-java-5.1.45.zip
 ls mysql-connector-java-5.1.45           
 
