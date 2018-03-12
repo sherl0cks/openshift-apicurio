@@ -4,11 +4,16 @@ set -ex
 
 mkdir /tmp/apicurio                                                                                                                                                     
 cd /tmp/apicurio                                                                                                                                                       
+
 curl -L -O https://github.com/Apicurio/apicurio-studio/releases/download/v0.2.4.Final/apicurio-studio-0.2.4.Final-quickstart.zip
 unzip -q apicurio-studio-0.2.4.Final-quickstart.zip                                                                                                                          
-mv apicurio-studio-0.2.4.Final/standalone/deployments/* $JBOSS_HOME/standalone/deployments                                                                                                           
+mv apicurio-studio-0.2.4.Final/standalone/deployments/* $JBOSS_HOME/standalone/deployments         
+
+curl -L -O https://dev.mysql.com/downloads/file/?id=474258     
+unzip -q mysql-connector-java-5.1.45.zip
+ls mysql-connector-java-5.1.45           
+
 ls -alh $JBOSS_HOME/standalone/deployments/                                                                                                                                   
 rm -rf /tmp/apicurio
 
-ls /tmp/src
 cp /tmp/src/configuration/* $JBOSS_HOME/standalone/configuration
